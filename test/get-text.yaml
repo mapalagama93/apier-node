@@ -1,0 +1,8 @@
+---
+name: Sample request
+request:
+  url: https://4ea2fd84-3883-43d4-bad7-7fd48ea017f8.mock.pstmn.io/get/text
+  method: get
+  headers:
+    customHeader: "{{customHeader}}"
+
