@@ -1,8 +1,20 @@
----
 name: Sample request
+preAction:
+  script: |
+    console.log(ctx.test())
+   
 request:
-  url: https://4ea2fd84-3883-43d4-bad7-7fd48ea017f8.mock.pstmn.io/get/json
+  url: https://reqres.in/api/users/{{user}}
   method: get
   headers:
-    customHeader: "{{customHeader}}"
-
+    "{{header}}" : "wow"
+assign:
+  body:
+    val1: $.data.email
+    val2: $.data.avatar
+  headers: 
+    power : x-powered-by
+    vary: vary
+postAction:
+  script: |
+    console.log(ctx.response.status);
