@@ -1,16 +1,10 @@
 ---
 name: Sample request
-preAction:
-  script: |
-    import vars
-    # following line will set values to vars:
-    set('customHeader', 'Sample header value')
-    set('userId', '2')
 request:
   url: https://enj0ybtyq5l08.x.pipedream.net/form/:userId
   method: post
   pathParams:
-    userId: "{{userId}}"
+    userId: "asd"
   queryParams:
     sampleQueryParamKey: This is query param value?asd
   headers:
